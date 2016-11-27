@@ -1,5 +1,5 @@
 # Created by https://www.gitignore.io/api/cmake,jetbrains,c++
-
+cmake-build-debug/
 ### CMake ###
 CMakeCache.txt
 CMakeFiles
@@ -17,6 +17,7 @@ CTestTestfile.cmake
 # User-specific stuff:
 .idea/workspace.xml
 .idea/tasks.xml
+cmake
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
