@@ -59,6 +59,7 @@
 if(SFML_STATIC_LIBRARIES)
     add_definitions(-DSFML_STATIC)
 endif()
+#set(SFML_ROOT "/home/fotoblysk/LIB/SFML-2.4.0")
 
 # define the list of search paths for headers and libraries
 set(FIND_SFML_PATHS

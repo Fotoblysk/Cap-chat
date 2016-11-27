@@ -23,17 +23,17 @@ endif ()
 project(Cap-chat_core)
 
 # Set version information in a config.h file
-set(VauxGame_VERSION_MAJOR 1)
-set(VauxGame_VERSION_MINOR 0)
-configure_file(
-        "config.h.in"
-        "${PROJECT_BINARY_DIR}/config.h"
-)
+#set(VauxGame_VERSION_MAJOR 1)
+#set(VauxGame_VERSION_MINOR 0)
+#configure_file(
+  #      "config.h.in"
+ #       "${PROJECT_BINARY_DIR}/config.h"
+#)
 include_directories("${PROJECT_BINARY_DIR}")
 
 # Define sources and executable
 set(EXECUTABLE_NAME "Cap-chat_core")
-add_library(${EXECUTABLE_NAME} Cap-chat.cpp Cap-chat.h);
+add_library(${EXECUTABLE_NAME} CapChat.cpp CapChat.h)
 
 
 # Detect and add SFML
