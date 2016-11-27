@@ -7,7 +7,8 @@
 
 
 class CapChat {
-
+public:
+    CapChat();
 };
 
 
