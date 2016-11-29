@@ -1,3 +1,0 @@
-[submodule "Cap-chat_tests/lib/googletest"]
-	path = Cap-chat_tests/lib/googletest
-	url = https://github.com/google/googletest
