@@ -65,6 +65,8 @@ endif()
 set(FIND_SFML_PATHS
     ${SFML_ROOT}
     $ENV{SFML_ROOT}
+    /home/fotoblysk/LIB/SFML-2.4.0
+    /home/juzeg/Downloads/SFML-2.4.0
     ~/Library/Frameworks
     /Library/Frameworks
     /usr/local
