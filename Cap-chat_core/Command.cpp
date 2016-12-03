@@ -5,15 +5,11 @@
 #include "Command.h"
 
 
+void Command::clear() {
+    int i;
+    for (i = 1; i <= 40; i++) {
+        std::cout << "\n";
+    }
 
+}
 
-void Command.clear()
-        {
-                int i ;
-        for( i = 1; i <= 40; i++ )
-        {
-            std::cout << "\n";
-        }
-
-        }
-}:

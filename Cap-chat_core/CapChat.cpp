@@ -1,17 +1,18 @@
 //
 // Created by fotoblysk on 27.11.16.
 //
-#include <stdlib.h>
+//#include <stdlib.h>
 #include <iostream>
-#include "CapChat.h"
 #include "Command.h"
 #include "Account.h"
+#include "CapChat.h"
 
 
 CapChat::CapChat() {
 
     Command Comm;
     std::cout << "Please insert command " << std::endl;
+    Account account;
     while (true) {
 
 
@@ -23,7 +24,7 @@ CapChat::CapChat() {
         if (Comm.comd == "new") {
 
 
-            Account.NewAccount();
+            account.NewAccount();
         } else {
             std::cout << "You entered unknown command please try again" << std::endl;
         }

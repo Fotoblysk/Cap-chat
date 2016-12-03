@@ -6,7 +6,7 @@
 #define CAP_CHAT_COMMAND_H
 
 #include <iostream>
-
+#include <string>
 class Command {
 public:
     std::string comd = "" ;
