@@ -4,10 +4,9 @@
 
 #include "Account.h"
 #include <fstream>
-#include <iostream>
+
 
 void Account::newAccount() {
-
 
 
     std::string filename;
@@ -35,10 +34,33 @@ void Account::newAccount() {
         accountfile << password;
     } else std::cout << "file creation fail" << std::endl;
 
+}
 
+std::string Account::login() {
+    std::string name;
+    std::string readName;
+    std::string readPassword;
+    std::string password;
+    std::string filename;
 
+    std::cout << "Please type in your name " << std::endl;
+    std::cin >> name;
+    std::cout << "\n Plaease type in your passoword \n ";
+    std::cin >> password;
 
+    std::fstream accountfile;
 
+    filename = name + ".txt";
+    accountfile.open(filename.c_str(), std::ios::in);
 
+    if (accountfile.good()) {
+        getline(accountfile, readName);
+        getline(accountfile, readPassword);
+        if ((readName == name) && (readPassword == password)) {
+            std::cout << "logged succesfully!" << std::endl;
+            return name;
+        }
+    } else { std::cout << "no such user on this computer " << std::endl; }
+    return "";
 
 }
