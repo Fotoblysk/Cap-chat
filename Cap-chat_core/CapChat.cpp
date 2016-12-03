@@ -10,21 +10,18 @@
 
 CapChat::CapChat() {
 
-    Command Comm;
+    Command command;
     std::cout << "Please insert command " << std::endl;
     Account account;
-    while (true) {
+    while (command.comd != "kill") { // more clear than exit(0) try tonot use it its antipattern
 
 
-        std::cin >> Comm.comd;
-        Comm.clear();
-        if (Comm.comd == "kill") {
-            exit(0);
-        }
-        if (Comm.comd == "new") {
+        std::cin >> command.comd;
+        command.clear();
+        if (command.comd == "new") {
 
 
-            account.NewAccount();
+            account.newAccount();
         } else {
             std::cout << "You entered unknown command please try again" << std::endl;
         }

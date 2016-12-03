@@ -8,7 +8,7 @@
 
 class Account {
 public:
-   void NewAccount();
+   void newAccount();
 };
 
 
