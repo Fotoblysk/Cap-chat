@@ -3,7 +3,7 @@ project(Cap-chat)
 
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
-set(SOURCE_FILES main.cpp Cap-chat_core/account.cpp)
+set(SOURCE_FILES main.cpp)
 add_executable(Cap-chat ${SOURCE_FILES})
 
 include_directories(Cap-chat_core)
