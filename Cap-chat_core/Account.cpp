@@ -57,7 +57,7 @@ std::string Account::login() {
         getline(accountfile, readName);
         getline(accountfile, readPassword);
         if ((readName == name) && (readPassword == password)) {
-            std::cout << "logged succesfu lly!" << std::endl;
+            std::cout << "logged succesfully!" << std::endl;
             return name;
         }
     } else { std::cout << "no such user on this computer " << std::endl; }
