@@ -9,7 +9,7 @@
 
 
 CapChat::CapChat() {
-    CCaccount user;
+    account::CCaccount user;
     command comm;
     std::cout << "Please insert command " << std::endl;
     while (true) {

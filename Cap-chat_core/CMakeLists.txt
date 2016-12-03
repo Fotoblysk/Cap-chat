@@ -33,7 +33,7 @@ include_directories("${PROJECT_BINARY_DIR}")
 
 # Define sources and executable
 set(EXECUTABLE_NAME "Cap-chat_core")
-add_library(${EXECUTABLE_NAME} CapChat.cpp CapChat.h command.h account.h)
+add_library(${EXECUTABLE_NAME} CapChat.cpp CapChat.h command.h account.h account.cpp account.h)
 
 
 # Detect and add SFML
