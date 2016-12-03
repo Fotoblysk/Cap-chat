@@ -3,19 +3,17 @@
 //
 
 #include "Command.h"
-Command::TerminalCommand{
-
-std::string comd = "";
 
 
-void Command::Clear
+
+
+void Command.clear()
         {
-                int i;
-        for ( i = 1; i <= 40; i++ )
+                int i ;
+        for( i = 1; i <= 40; i++ )
         {
             std::cout << "\n";
         }
 
-
-        };
+        }
 }:

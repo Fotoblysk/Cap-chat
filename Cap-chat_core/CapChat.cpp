@@ -23,12 +23,9 @@ CapChat::CapChat() {
         if (Comm.comd == "new") {
 
 
-
-              Account::NewAccount();
-        }
-        else
-        {
-            std::cout << "You entered unknown command please try again"<< std::endl;
+            Account.NewAccount();
+        } else {
+            std::cout << "You entered unknown command please try again" << std::endl;
         }
 
 

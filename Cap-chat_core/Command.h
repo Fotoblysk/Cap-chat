@@ -5,19 +5,13 @@
 #ifndef CAP_CHAT_COMMAND_H
 #define CAP_CHAT_COMMAND_H
 
+#include <iostream>
 
 class Command {
 public:
     std::string comd = "" ;
-    void clear()
-    {
-        int i ;
-        for( i = 1; i <= 40; i++ )
-        {
-            std::cout << "\n";
-        }
+    void clear();
 
-    }
 
 };
 

@@ -6,7 +6,7 @@
 #include <fstream>
 #include <iostream>
 
-void Account::NewAccount() {
+void Account.NewAccount() {
 
 
 
