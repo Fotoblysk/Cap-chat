@@ -6,11 +6,9 @@
 #define CAP_CHAT_ACCOUNT_H
 
 
-class account {
+class Account {
 public:
-account();
-
-
+    NewAccount();
 };
 
 

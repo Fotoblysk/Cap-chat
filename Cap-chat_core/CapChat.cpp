@@ -4,27 +4,27 @@
 #include <stdlib.h>
 #include <iostream>
 #include "CapChat.h"
-#include "command.h"
-#include "account.h"
+#include "Command.h"
+#include "Account.h"
 
 
 CapChat::CapChat() {
-    account::CCaccount user;
-    command comm;
+
+    Command Comm;
     std::cout << "Please insert command " << std::endl;
     while (true) {
 
 
-        std::cin >> comm.comd;
-        comm.clear();
-        if (comm.comd == "kill") {
+        std::cin >> Comm.comd;
+        Comm.clear();
+        if (Comm.comd == "kill") {
             exit(0);
         }
-        if (comm.comd == "new") {
+        if (Comm.comd == "new") {
 
 
 
-              user.newacc();
+              Account::NewAccount();
         }
         else
         {
