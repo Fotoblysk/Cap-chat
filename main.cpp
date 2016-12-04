@@ -6,6 +6,7 @@
 
 int main(){
     CapChat test;
+    test.run();
 
 
     return 0;
