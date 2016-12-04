@@ -9,7 +9,8 @@
 
 class Account {
 public:
-   void newAccount();
+    void newAccount();
+
     std::string login();
 };
 

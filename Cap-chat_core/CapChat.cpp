@@ -13,20 +13,20 @@ CapChat::CapChat() {
     Command command;
     std::cout << "Please insert command " << std::endl;
     Account account;
-    while (command.comd != "kill") { // more clear than exit(0) try to not use it its antipattern
+    while (command.cmd != "kill") { // more clear than exit(0) try to not use it its antipattern
 
 
-        std::cin >> command.comd;
-        command.clear();
+        std::cin >> command.cmd;
+        command.clearScr();
 
-        if (command.comd == "new") { account.newAccount(); }
-        if (command.comd == "kill") { std::cout << "shutting down" << std::endl; }
-        if(command.comd == "login") {account.login();}
-
-        }
-
+        if (command.cmd == "new") { account.newAccount(); }
+        if (command.cmd == "kill") { std::cout << "shutting down" << std::endl; }
+        if (command.cmd == "login") { account.login(); }
 
     }
+
+
+}
 
 
 

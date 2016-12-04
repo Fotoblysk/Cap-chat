@@ -7,10 +7,12 @@
 
 #include <iostream>
 #include <string>
+
 class Command {
 public:
-    std::string comd = "" ;
-    void clear();
+    std::string cmd = ""; // we dont need storing currennt command string here
+
+    void clearScr(); // we can use smart ICommand pattern here :)
 
 
 };
