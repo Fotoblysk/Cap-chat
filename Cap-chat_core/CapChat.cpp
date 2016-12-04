@@ -6,26 +6,21 @@
 #include "Command.h"
 #include "Account.h"
 #include "CapChat.h"
+#include "CmdInputHandler.h"
 
 
 CapChat::CapChat() {
+    inputHandler = new CmdInputHandler; // StrategyPattern here, we can change to SFML input handling later
+                                        // TODO change to std::unique_ptr (smart pointers) from c++11
+}
 
-    Command command;
-    std::cout << "Please insert command " << std::endl;
-    Account account;
-    while (command.cmd != "kill") { // more clear than exit(0) try to not use it its antipattern
+void CapChat::run() {
+    while(inputHandler->handleInput());
+}
 
-
-        std::cin >> command.cmd;
-        command.clearScr();
-
-        if (command.cmd == "new") { account.newAccount(); }
-        if (command.cmd == "kill") { std::cout << "shutting down" << std::endl; }
-        if (command.cmd == "login") { account.login(); }
-
-    }
-
-
+CapChat::~CapChat() {
+    // we don't like memory leaks
+    delete inputHandler;
 }
 
 
