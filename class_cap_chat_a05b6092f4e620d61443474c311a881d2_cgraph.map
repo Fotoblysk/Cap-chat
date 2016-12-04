@@ -1,0 +1,5 @@
+<map id="CapChat::CapChat" name="CapChat::CapChat">
+<area shape="rect" id="node2" href="$class_command.html#a57fbea0c0d10ef4b184c7ef3eb34590d" title="Command::clear" alt="" coords="204,5,323,32"/>
+<area shape="rect" id="node3" href="$class_account.html#a5ff2e340141308181c81a6a85bc1c6b2" title="Account::newAccount" alt="" coords="188,56,339,83"/>
+<area shape="rect" id="node4" href="$class_account.html#ae70238e7b95708e012aa8f9d90a8130c" title="Account::login" alt="" coords="211,107,316,133"/>
+</map>
