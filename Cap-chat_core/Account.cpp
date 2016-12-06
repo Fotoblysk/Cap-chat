@@ -28,10 +28,7 @@ std::string Account::login(std::string name, std::string password) {
     std::string readPassword;
     std::string filename;
 
-    std::cout << "Please type in your name " << std::endl;
-    std::cin >> name;
-    std::cout << "\n Plaease type in your passoword \n ";
-    std::cin >> password;
+
 
     std::fstream accountfile;
 
@@ -44,7 +41,7 @@ std::string Account::login(std::string name, std::string password) {
         if ((readName == name) && (readPassword == password)) {
             std::cout << "logged succesfully!" << std::endl;
             return name;
-        }
+        }else {std::cout << "logging data is incorrect " << std::endl;}
     } else { std::cout << "no such user on this computer " << std::endl; }
     accountfile.close();
     return "";
