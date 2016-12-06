@@ -3,19 +3,25 @@
 //
 //#include <stdlib.h>
 #include <iostream>
-#include "Command.h"
+#include <memory>
+#include "CmdView.h"
 #include "Account.h"
 #include "CapChat.h"
 #include "CmdInputHandler.h"
 
 
 CapChat::CapChat() {
-    inputHandler = new CmdInputHandler; // StrategyPattern here, we can change to SFML input handling later
+    inputHandler = new CmdInputHandler(new CmdView,
+                                       new CapChatData); // StrategyPattern here, we can change to SFML input handling later
     // TODO change to std::unique_ptr (smart pointers) from c++11
 }
 
 void CapChat::run() {
-    while (inputHandler->handleInput());
+    do {
+        _currentCommand.reset(inputHandler->handleInput());
+        if (_currentCommand)
+            _currentCommand->execute();
+    } while (_currentCommand);
 }
 
 CapChat::~CapChat() {

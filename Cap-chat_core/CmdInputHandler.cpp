@@ -4,29 +4,46 @@
 
 #include <iostream>
 #include <Commands/ICommand.h>
+#include <Commands/NewAccountCommand.h>
 #include "CmdInputHandler.h"
 #include "Account.h"
-#include "Command.h"
+#include "CmdView.h"
+#include "CapChatData.h"
 
-ICommand* CmdInputHandler::handleInput() { // TODO use ICommand pattern here
+ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
     std::string command;
     std::cout << "Please insert command " << std::endl;
-    Account account;
     std::cin >> command;    // look we don't really need to store string as a class var :), it can be a local var
-    Command::clearScr();
+    CmdView::clearScr();
 
     if (command == "kill")
-        return false;   // exiting a program returning booleans for state is not so clear but i try to change small
-                        // ammount of code in single feature
+        return nullptr;   // exiting a program returning booleans for state is not so clear but i try to change small
+        // ammount of code in single feature
 
 
     else if (command == "new") {
-        account.newAccount();   // this is not 100% separated input from program logic
-        return true;           // we need po get this logic to our main loop
+        std::string name, password;
+        std::cout << "How should i call you?   " << std::endl;
+        std::cin >> name;
+        std::cout << "file name is   :" << name << ".txt" << std::endl;
+        std::cout << "Please insert your passoword" << std::endl;
+        std::cin >> password;
+        // this is not 100% separated input from program logic
+        return (ICommand *) (new NewAccountCommand(name, password));
     }                          // we want to return functoin we want to execute (search for ICommand patern)
     else if (command == "login") {
-        account.login();
-        return true;
+
+        Account::login();//TODO add LoginCommand
+        return nullptr;
     }
+    return nullptr;
+}
+
+CmdInputHandler::CmdInputHandler(CmdView *view, CapChatData *data) : _view(view), _data(data) {
+
+}
+
+CmdInputHandler::~CmdInputHandler() {
+    delete _view;
 }
 

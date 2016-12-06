@@ -7,13 +7,18 @@
 
 
 #include "InputHandler.h"
+#include <memory>
 
 class CapChat {
 public:
     CapChat();
+
     ~CapChat();
+
     void run();
-    InputHandler * inputHandler;    // TODO change to std::unique_ptr (smart pointers) from c++11
+
+    std::unique_ptr<ICommand> _currentCommand;
+    InputHandler *inputHandler;    // TODO change to std::unique_ptr (smart pointers) from c++11
 };
 
 

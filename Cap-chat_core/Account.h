@@ -9,9 +9,9 @@
 
 class Account {
 public:
-    void newAccount();
+    static void newAccount(std::string name, std::string password);
 
-    std::string login();
+    static std::string login();//TODO get input reading outside
 };
 
 

@@ -8,15 +8,23 @@
 
 #include <map>
 #include "InputHandler.h"
-#include "Command.h"
+#include "CmdView.h"
+#include "Account.h"
+#include "CapChatData.h"
+#include "Commands/ICommand.h"
 
 class CmdInputHandler : public InputHandler {
 public:
-    Command* killCommand;
-    Command* loginCommand;
-    Command* killCommand;
+    CmdInputHandler(CmdView* view, CapChatData* data);
+    CapChatData* _data;
+    virtual ~CmdInputHandler();
+
+    ICommand* killCommand;  //TODO we can use std::map to map Commands to strings
+    ICommand* loginCommand;
+    ICommand* newAccountCommand;
+    CmdView* _view;
 private:
-    bool handleInput() override;
+    ICommand * handleInput() override;
 };
 
 

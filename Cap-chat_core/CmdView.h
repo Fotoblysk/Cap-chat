@@ -8,7 +8,7 @@
 #include <iostream>
 #include <string>
 
-class Command {
+class CmdView {
 public:
 
     static void clearScr(); // we can use smart ICommand pattern here :)
