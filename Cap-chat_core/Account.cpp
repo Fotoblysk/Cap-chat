@@ -23,11 +23,9 @@ void Account::newAccount(std::string name, std::string password) {
     accountfile.close();
 }
 
-std::string Account::login() {
-    std::string name;
+std::string Account::login(std::string name, std::string password) {
     std::string readName;
     std::string readPassword;
-    std::string password;
     std::string filename;
 
     std::cout << "Please type in your name " << std::endl;

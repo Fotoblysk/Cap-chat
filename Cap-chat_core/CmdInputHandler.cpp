@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <Commands/ICommand.h>
+#include <Commands/LoginCommand.h>
 #include <Commands/NewAccountCommand.h>
 #include "CmdInputHandler.h"
 #include "Account.h"
@@ -33,8 +34,15 @@ ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
     }                          // we want to return functoin we want to execute (search for ICommand patern)
     else if (command == "login") {
 
-        Account::login();//TODO add LoginCommand
-        return nullptr;
+
+        std::string name, password;
+        std::cout << "What's your name" << std::endl;
+        std::cin >> name;
+        std::cout << "Please insert your passoword" << std::endl;
+        std::cin >> password;
+
+
+        return (ICommand *) (new LoginCommand(name, password));
     }
     return nullptr;
 }

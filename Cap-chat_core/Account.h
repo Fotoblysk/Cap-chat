@@ -11,7 +11,7 @@ class Account {
 public:
     static void newAccount(std::string name, std::string password);
 
-    static std::string login();//TODO get input reading outside
+    static std::string login(std::string name, std::string password);//TODO get input reading outside
 };
 
 
