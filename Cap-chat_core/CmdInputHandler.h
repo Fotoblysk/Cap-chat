@@ -6,9 +6,16 @@
 #define CAP_CHAT_CMDINPUTHANDLER_H
 
 
+#include <map>
 #include "InputHandler.h"
+#include "Command.h"
 
 class CmdInputHandler : public InputHandler {
+public:
+    Command* killCommand;
+    Command* loginCommand;
+    Command* killCommand;
+private:
     bool handleInput() override;
 };
 

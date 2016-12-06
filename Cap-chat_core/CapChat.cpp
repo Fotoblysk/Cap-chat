@@ -11,11 +11,11 @@
 
 CapChat::CapChat() {
     inputHandler = new CmdInputHandler; // StrategyPattern here, we can change to SFML input handling later
-                                        // TODO change to std::unique_ptr (smart pointers) from c++11
+    // TODO change to std::unique_ptr (smart pointers) from c++11
 }
 
 void CapChat::run() {
-    while(inputHandler->handleInput());
+    while (inputHandler->handleInput());
 }
 
 CapChat::~CapChat() {

@@ -10,9 +10,8 @@
 
 class Command {
 public:
-    std::string cmd = ""; // we dont need storing currennt command string here
 
-    void clearScr(); // we can use smart ICommand pattern here :)
+    static void clearScr(); // we can use smart ICommand pattern here :)
 
 
 };

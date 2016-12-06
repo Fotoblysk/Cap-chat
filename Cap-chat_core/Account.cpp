@@ -33,6 +33,7 @@ void Account::newAccount() {
         std::cin >> password;
         accountfile << password;
     } else std::cout << "file creation fail" << std::endl;
+    accountfile.close();
 
 }
 
@@ -61,6 +62,7 @@ std::string Account::login() {
             return name;
         }
     } else { std::cout << "no such user on this computer " << std::endl; }
+    accountfile.close();
     return "";
 
 }
