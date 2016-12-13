@@ -8,7 +8,7 @@
 #include "iostream"
 #include "ICommand.h"
 
-class SendMessageCommand {
+class SendMessageCommand :ICommand {
 public:
     SendMessageCommand(std::string _text);
 
