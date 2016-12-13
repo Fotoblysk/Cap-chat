@@ -22,6 +22,7 @@ public:
     ICommand* killCommand;  //TODO we can use std::map to map Commands to strings
     ICommand* loginCommand;
     ICommand* newAccountCommand;
+    ICommand* SendMessageCommand;
     CmdView* _view;
 private:
     ICommand * handleInput() override;

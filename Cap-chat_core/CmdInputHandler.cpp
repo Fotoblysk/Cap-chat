@@ -6,6 +6,7 @@
 #include <Commands/ICommand.h>
 #include <Commands/LoginCommand.h>
 #include <Commands/NewAccountCommand.h>
+#include <Commands/SendMessageCommand.h>
 #include "CmdInputHandler.h"
 #include "Account.h"
 #include "CmdView.h"
@@ -44,6 +45,18 @@ ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
 
         return (ICommand *) (new LoginCommand(name, password));
     }
+    else if (command == "chat")
+    {
+
+        std::cout >> " >>  " ;
+
+
+        return (ICommand *) (new SendMessageCommand(std::cin) )
+
+
+    }
+
+
     return nullptr;
 }
 
