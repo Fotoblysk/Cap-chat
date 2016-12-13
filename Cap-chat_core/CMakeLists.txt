@@ -26,8 +26,8 @@ project(Cap-chat_core)
 #set(VauxGame_VERSION_MAJOR 1)
 #set(VauxGame_VERSION_MINOR 0)
 #configure_file(
-  #      "config.h.in"
- #       "${PROJECT_BINARY_DIR}/config.h"
+#      "config.h.in"
+#       "${PROJECT_BINARY_DIR}/config.h"
 #)
 include_directories("${PROJECT_BINARY_DIR}")
 

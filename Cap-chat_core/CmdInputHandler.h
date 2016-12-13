@@ -6,10 +6,8 @@
 #define CAP_CHAT_CMDINPUTHANDLER_H
 
 
-#include <map>
 #include "InputHandler.h"
 #include "CmdView.h"
-#include "Account.h"
 #include "CapChatData.h"
 #include "Commands/ICommand.h"
 
@@ -18,14 +16,9 @@ public:
     CmdInputHandler(CmdView* view, CapChatData* data);
     CapChatData* _data;
     virtual ~CmdInputHandler();
-
-    ICommand* killCommand;  //TODO we can use std::map to map Commands to strings
-    ICommand* loginCommand;
-    ICommand* newAccountCommand;
-    ICommand* SendMessageCommand;
-    CmdView* _view;
-private:
     ICommand * handleInput() override;
+private:
+    CmdView* _view;
 };
 
 

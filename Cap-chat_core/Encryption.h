@@ -5,7 +5,7 @@
 #ifndef CAP_CHAT_ENCRYPTION_H
 #define CAP_CHAT_ENCRYPTION_H
 
-#include <math.h>
+#include <cmath>
 #include <iostream>
 
 class Encryption {

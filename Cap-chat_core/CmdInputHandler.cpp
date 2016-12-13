@@ -8,9 +8,6 @@
 #include <Commands/NewAccountCommand.h>
 #include <Commands/SendMessageCommand.h>
 #include "CmdInputHandler.h"
-#include "Account.h"
-#include "CmdView.h"
-#include "CapChatData.h"
 
 ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
     std::string command;
@@ -50,9 +47,7 @@ ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
 
         std::cout << " **  " ;
 
-
-        return (ICommand *) (new SendMessageCommand(std::cin) )
-
+        return (ICommand *) (new SendMessageCommand("test"));
 
     }
 

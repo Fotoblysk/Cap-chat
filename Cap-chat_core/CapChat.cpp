@@ -1,11 +1,8 @@
 //
 // Created by fotoblysk on 27.11.16.
 //
-//#include <stdlib.h>
-#include <iostream>
 #include <memory>
 #include "CmdView.h"
-#include "Account.h"
 #include "CapChat.h"
 #include "CmdInputHandler.h"
 

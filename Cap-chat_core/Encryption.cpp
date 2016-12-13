@@ -3,9 +3,8 @@
 //
 
 #include "Encryption.h"
-#include <iostream>
 
-std::string EncryptText(std::string text) {
+std::string Encryption::EncryptText(std::string text) {
     const std::string krypt_ring[5] = {"EKMFLGDQVZNTOWYHXUSPAIBRCJ",
                                             "AJDKSIRUXBLHWTMCQGZNPYFVOE",
                                             "BDFHJLCPRTXVZNYEIWGAKMUSQO",

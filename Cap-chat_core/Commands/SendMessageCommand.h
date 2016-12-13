@@ -5,12 +5,13 @@
 #ifndef CAP_CHAT_SENDMESSAGE_H
 #define CAP_CHAT_SENDMESSAGE_H
 
-#include "iostream"
+#include <string>
 #include "ICommand.h"
 
-class SendMessageCommand :ICommand {
+class SendMessageCommand : public ICommand {
 public:
-    SendMessageCommand(std::string _text);
+    SendMessageCommand(std::string text);
+    SendMessageCommand(){}
 
    void execute() override ;
 private:

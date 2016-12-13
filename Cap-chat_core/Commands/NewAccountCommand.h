@@ -8,11 +8,12 @@
 #include <string>
 #include "ICommand.h"
 
-class NewAccountCommand :ICommand{
+class NewAccountCommand : public ICommand {
 public:
     NewAccountCommand(std::string name, std::string password);
 
     void execute() override;
+
 private:
     std::string _name, _password;
 };
