@@ -44,10 +44,10 @@ ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
     }
     else if (command == "chat")
     {
+        std::string message;
+        std::cin >> message;
 
-        std::cout << " **  " ;
-
-        return (ICommand *) (new SendMessageCommand("test"));
+        return (ICommand *) (new SendMessageCommand(message));
 
     }
 

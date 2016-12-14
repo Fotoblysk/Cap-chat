@@ -9,7 +9,7 @@ SendMessageCommand::SendMessageCommand(std::string text) : _text(text) {}
 
 void SendMessageCommand::execute() {
 
-    std::cout << Encryption::EncryptText(_text); //will be changed to real sending function
+    std::cout << Encryption::EncryptText(_text) << std::endl; //will be changed to real sending function
 
 
 }
