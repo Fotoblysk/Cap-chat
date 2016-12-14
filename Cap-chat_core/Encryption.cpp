@@ -14,7 +14,7 @@ std::string Encryption::EncryptText(std::string text) {
     lenght = text.length();
 
 
-    std::cout << text <<  std::endl;
+
 
     while (counter <= (lenght-1) )
     {
