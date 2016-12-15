@@ -9,6 +9,8 @@
 #include <Commands/SendMessageCommand.h>
 #include <Commands/NotCorrectCommand.h>
 #include "CmdInputHandler.h"
+#include <atomic>
+#include <thread>
 
 ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
     std::string command;
@@ -57,9 +59,18 @@ ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
 
         }
     } else if (chatState == ChatState::Chat) {
+        networkService.update();
+        std::atomic_bool a;
+        a = false;
+        std::thread updateThread([&]() {
+            updateChat(a);
+        });
         std::string message;
         std::getline(std::cin, message);
         std::cout << message << std::endl;
+        a = true;
+        if (updateThread.joinable())
+            updateThread.join();
         return (ICommand *) (new SendMessageCommand(message, &networkService));
     }
 
@@ -73,5 +84,11 @@ CmdInputHandler::CmdInputHandler(CmdView *view, CapChatData *data) : _view(view)
 
 CmdInputHandler::~CmdInputHandler() {
     delete _view;
+}
+
+void CmdInputHandler::updateChat(std::atomic_bool &ifShouldEnd) {
+    while (!ifShouldEnd)
+        networkService.update();
+
 }
 

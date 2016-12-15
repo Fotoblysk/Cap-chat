@@ -6,6 +6,7 @@
 #define CAP_CHAT_CMDINPUTHANDLER_H
 
 
+#include <atomic>
 #include "InputHandler.h"
 #include "CmdView.h"
 #include "CapChatData.h"
@@ -19,8 +20,12 @@ public:
         Chat
     };
     ChatState chatState;
+
     CmdInputHandler(CmdView *view, CapChatData *data);
+
     NetworkService networkService;
+
+    void updateChat(std::atomic_bool &ifShouldEnd);
 
     CapChatData *_data;
 
