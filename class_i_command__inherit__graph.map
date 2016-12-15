@@ -1,0 +1,5 @@
+<map id="ICommand" name="ICommand">
+<area shape="rect" id="node2" href="$class_login_command.html" title="LoginCommand" alt="" coords="5,80,119,107"/>
+<area shape="rect" id="node3" href="$class_new_account_command.html" title="NewAccountCommand" alt="" coords="143,80,301,107"/>
+<area shape="rect" id="node4" href="$class_send_message_command.html" title="SendMessageCommand" alt="" coords="325,80,490,107"/>
+</map>

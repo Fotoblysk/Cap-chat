@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_i_command.html" title="ICommand" alt="" coords="5,56,92,83"/>
+<area shape="rect" id="node2" href="$class_login_command.html" title="LoginCommand" alt="" coords="166,5,279,32"/>
+<area shape="rect" id="node3" href="$class_new_account_command.html" title="NewAccountCommand" alt="" coords="144,56,301,83"/>
+<area shape="rect" id="node4" href="$class_send_message_command.html" title="SendMessageCommand" alt="" coords="140,107,305,133"/>
+</map>

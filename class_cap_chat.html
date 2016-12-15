@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -84,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_cap_chat-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CapChat Class Reference</div>  </div>
@@ -91,11 +93,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_cap_chat_8h_source.html">CapChat.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for CapChat:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_cap_chat__coll__graph.png" border="0" usemap="#_cap_chat_coll__map" alt="Collaboration graph"/></div>
+<map name="_cap_chat_coll__map" id="_cap_chat_coll__map">
+<area shape="rect" id="node2" href="class_input_handler.html" title="InputHandler" alt="" coords="5,5,101,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a05b6092f4e620d61443474c311a881d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cap_chat.html#a05b6092f4e620d61443474c311a881d2">CapChat</a> ()</td></tr>
 <tr class="separator:a05b6092f4e620d61443474c311a881d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2215d030312ff08baf7d7bba5aee738"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cap_chat.html#ab2215d030312ff08baf7d7bba5aee738">~CapChat</a> ()</td></tr>
+<tr class="separator:ab2215d030312ff08baf7d7bba5aee738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc9a28831ef2745c3af07a9ff523cd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cap_chat.html#aedc9a28831ef2745c3af07a9ff523cd4">run</a> ()</td></tr>
+<tr class="separator:aedc9a28831ef2745c3af07a9ff523cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aa9cdb98bb1e1126f73e54574e1e119ba"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_i_command.html">ICommand</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cap_chat.html#aa9cdb98bb1e1126f73e54574e1e119ba">_currentCommand</a></td></tr>
+<tr class="separator:aa9cdb98bb1e1126f73e54574e1e119ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b9b907235e9ac9f5d15212393853c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_input_handler.html">InputHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cap_chat.html#ad8b9b907235e9ac9f5d15212393853c7">inputHandler</a></td></tr>
+<tr class="separator:ad8b9b907235e9ac9f5d15212393853c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a05b6092f4e620d61443474c311a881d2"></a>
@@ -111,17 +132,71 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a class="anchor" id="ab2215d030312ff08baf7d7bba5aee738"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CapChat::~CapChat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aedc9a28831ef2745c3af07a9ff523cd4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CapChat::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_cap_chat_a05b6092f4e620d61443474c311a881d2_cgraph.png" border="0" usemap="#class_cap_chat_a05b6092f4e620d61443474c311a881d2_cgraph" alt=""/></div>
-<map name="class_cap_chat_a05b6092f4e620d61443474c311a881d2_cgraph" id="class_cap_chat_a05b6092f4e620d61443474c311a881d2_cgraph">
-<area shape="rect" id="node2" href="class_command.html#a57fbea0c0d10ef4b184c7ef3eb34590d" title="Command::clear" alt="" coords="204,5,323,32"/>
-<area shape="rect" id="node3" href="class_account.html#a5ff2e340141308181c81a6a85bc1c6b2" title="Account::newAccount" alt="" coords="188,56,339,83"/>
-<area shape="rect" id="node4" href="class_account.html#ae70238e7b95708e012aa8f9d90a8130c" title="Account::login" alt="" coords="211,107,316,133"/>
+<div class="center"><img src="class_cap_chat_aedc9a28831ef2745c3af07a9ff523cd4_cgraph.png" border="0" usemap="#class_cap_chat_aedc9a28831ef2745c3af07a9ff523cd4_cgraph" alt=""/></div>
+<map name="class_cap_chat_aedc9a28831ef2745c3af07a9ff523cd4_cgraph" id="class_cap_chat_aedc9a28831ef2745c3af07a9ff523cd4_cgraph">
+<area shape="rect" id="node2" href="class_input_handler.html#a863a7f2c4395f818c3bb7603bf592ecf" title="InputHandler::handleInput" alt="" coords="153,5,324,32"/>
 </map>
 </div>
 </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aa9cdb98bb1e1126f73e54574e1e119ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_i_command.html">ICommand</a>&gt; CapChat::_currentCommand</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad8b9b907235e9ac9f5d15212393853c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_input_handler.html">InputHandler</a>* CapChat::inputHandler</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -132,7 +207,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 4 2016 12:22:09 for Cap-chat by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 15 2016 11:59:10 for Cap-chat by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
