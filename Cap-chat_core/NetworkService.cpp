@@ -15,8 +15,10 @@ void NetworkService::update() {
     std::size_t received;
     char data[255];
     if (tcpSocket.getLocalPort() != 0)
-        if (tcpSocket.receive(data, 255, received))
+        if (tcpSocket.receive(data, 255, received) == sf::Socket::Done){
+            std::cout<<"got data"<<std::endl;
             std::cout << data << std::endl;
+        }
 }
 
 bool
@@ -28,6 +30,7 @@ NetworkService::startConnection(std::string ip, unsigned int port, sf::Time time
         } else
             return false;
     } else {
+        std::cout << "listening" << std::endl;
         if (listenerSocket.listen(port) == sf::Socket::Done)
             if (listenerSocket.accept(tcpSocket) == sf::Socket::Done) {
                 std::cout << "Connected to" << tcpSocket.getRemoteAddress().toString() << std::endl;
@@ -42,6 +45,7 @@ NetworkService::startConnection(std::string ip, unsigned int port, sf::Time time
 bool NetworkService::sendData(char *sendData) {
     std::copy(sendData, sendData + std::strlen(sendData), _sendData);
     if (tcpSocket.send(_sendData, 255) == sf::Socket::Done) {
+        std::cout<<"sending"<<std::endl;
         return true;
     }
     return false;
