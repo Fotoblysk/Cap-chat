@@ -7,9 +7,18 @@
 
 
 #include "InputHandler.h"
+#include "CmdView.h"
+#include "CapChatData.h"
+#include "Commands/ICommand.h"
 
 class CmdInputHandler : public InputHandler {
-    bool handleInput() override;
+public:
+    CmdInputHandler(CmdView* view, CapChatData* data);
+    CapChatData* _data;
+    virtual ~CmdInputHandler();
+    ICommand * handleInput() override;
+private:
+    CmdView* _view;
 };
 
 

@@ -26,14 +26,14 @@ project(Cap-chat_core)
 #set(VauxGame_VERSION_MAJOR 1)
 #set(VauxGame_VERSION_MINOR 0)
 #configure_file(
-  #      "config.h.in"
- #       "${PROJECT_BINARY_DIR}/config.h"
+#      "config.h.in"
+#       "${PROJECT_BINARY_DIR}/config.h"
 #)
 include_directories("${PROJECT_BINARY_DIR}")
 
 # Define sources and executable
 set(EXECUTABLE_NAME "Cap-chat_core")
-add_library(${EXECUTABLE_NAME} CapChat.cpp CapChat.h Account.cpp Account.h Command.cpp Command.h InputHandler.h CmdInputHandler.cpp CmdInputHandler.h)
+add_library(${EXECUTABLE_NAME} CapChat.cpp CapChat.h Account.cpp Account.h CmdView.cpp CmdView.h InputHandler.h CmdInputHandler.cpp CmdInputHandler.h Commands/ICommand.h Commands/NewAccountCommand.cpp Commands/NewAccountCommand.h CapChatData.h Commands/LoginCommand.cpp Commands/LoginCommand.h Encryption.cpp Encryption.h Commands/SendMessageCommand.cpp Commands/SendMessageCommand.h)
 
 
 # Detect and add SFML

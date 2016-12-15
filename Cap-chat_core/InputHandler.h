@@ -6,9 +6,11 @@
 #define CAP_CHAT_INPUTHANDLER_H
 
 
+#include <Commands/ICommand.h>
+
 class InputHandler {// interface
 public:
-    virtual bool handleInput() = 0;
+    virtual ICommand * handleInput() = 0;
 };
 
 
