@@ -10,15 +10,26 @@
 #include "CmdView.h"
 #include "CapChatData.h"
 #include "Commands/ICommand.h"
+#include "NetworkService.h"
 
 class CmdInputHandler : public InputHandler {
 public:
-    CmdInputHandler(CmdView* view, CapChatData* data);
-    CapChatData* _data;
+    enum ChatState {
+        Interpreter,
+        Chat
+    };
+    ChatState chatState;
+    CmdInputHandler(CmdView *view, CapChatData *data);
+    NetworkService networkService;
+
+    CapChatData *_data;
+
     virtual ~CmdInputHandler();
-    ICommand * handleInput() override;
+
+    ICommand *handleInput() override;
+
 private:
-    CmdView* _view;
+    CmdView *_view;
 };
 
 
