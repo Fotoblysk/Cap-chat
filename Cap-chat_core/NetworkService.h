@@ -15,10 +15,12 @@ public:
 private:
 
     sf::TcpSocket tcpSocket;
+    sf::TcpSocket tcpSocketReciver;
 
     char _sendData[255];
 
     sf::TcpListener listenerSocket;
+    sf::TcpListener listenerSocket2;
 };
 
 

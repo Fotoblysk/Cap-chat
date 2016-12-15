@@ -14,5 +14,6 @@ void SendMessageCommand::execute() {
     // testing_string = Encryption::EncryptText(_text);
     // std::cout << "message coded     >"  <<testing_string << "<"<< std::endl; //will be changed to real sending function
     // std::cout << " uncoded    >" << Encryption::EncryptText(testing_string)<< "<" << std::endl;
+    std::cout<<"sending "<<_text<<std::endl;
     _networkService->sendData((char *) _text.c_str());
 }
