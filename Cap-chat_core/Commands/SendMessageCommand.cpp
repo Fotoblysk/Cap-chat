@@ -8,8 +8,9 @@
 SendMessageCommand::SendMessageCommand(std::string text) : _text(text) {}
 
 void SendMessageCommand::execute() {
-
-    std::cout << Encryption::EncryptText(_text) << std::endl; //will be changed to real sending function
-
+std::string testing_string;
+    testing_string = Encryption::EncryptText(_text);
+    std::cout << "message coded     >"  <<testing_string << "<"<< std::endl; //will be changed to real sending function
+   std::cout << " uncoded    >" << Encryption::EncryptText(testing_string)<< "<" << std::endl;
 
 }

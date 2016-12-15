@@ -1,6 +1,6 @@
 //
 // Created by fotoblysk on 04.12.16.
-//
+// works only for single words
 
 #include <iostream>
 #include <Commands/ICommand.h>
@@ -41,12 +41,16 @@ ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
 
 
         return (ICommand *) (new LoginCommand(name, password));
-    }
-    else if (command == "chat")
-    {
-        std::string message;
-        std::cin >> message;
-
+    } else if (command == "chat") {
+        std::string message ;
+       std::cin >> message;
+        std::cout << message << std::endl;
+        std::size_t found = message.find_first_of(" ");
+        while (found != std::string::npos) {
+            message[found] = '*';
+            found = message.find_first_of(" ", found + 1);
+        }
+        std::cout << message << std::endl;
         return (ICommand *) (new SendMessageCommand(message));
 
     }
