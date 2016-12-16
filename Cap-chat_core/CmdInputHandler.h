@@ -7,6 +7,7 @@
 
 
 #include <atomic>
+#include <thread>
 #include "InputHandler.h"
 #include "CmdView.h"
 #include "CapChatData.h"
@@ -32,6 +33,9 @@ public:
     virtual ~CmdInputHandler();
 
     ICommand *handleInput() override;
+
+    std::atomic_bool a;
+    std::thread updateThread;
 
 private:
     CmdView *_view;

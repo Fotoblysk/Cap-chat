@@ -19,12 +19,10 @@ ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
         std::cin >> command;    // look we don't really need to store string as a class var :), it can be a local var
         CmdView::clearScr();
 
-        if (command == "kill")
+        if (command == "kill") {
             return nullptr;   // exiting a program returning booleans for state is not so clear but i try to change small
             // ammount of code in single feature
-
-
-        else if (command == "new") {
+        } else if (command == "new") {
             std::string name, password;
             std::cout << "How should i call you?   " << std::endl;
             std::cin >> name;
@@ -54,27 +52,23 @@ ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
             if (networkService.startConnection(ip)) {
                 chatState = ChatState::Chat;
                 std::cout << "Cap-chat start typing your msg" << std::endl;
+                updateThread = std::thread([&]() {
+                    updateChat(a);
+                });
             }
             std::cout << std::endl;
+            a = false;
 
         }
     } else if (chatState == ChatState::Chat) {
-        std::cout<<"chat mode"<<std::endl;
-        std::atomic_bool a;
-        a = false;
-        std::thread updateThread([&]() {
-            std::cout<<"thread start"<<std::endl;
-            updateChat(a);
-            std::cout<<"thread end"<<std::endl;
-        });
+        std::cout << "chat mode" << std::endl;
         std::string message;
-        std::cin>> message;
+        std::cin >> message;
         std::cout << message << std::endl;
-        a = true;
-        std::cout<<"joining thread"<<std::endl;
-        if (updateThread.joinable())
-            updateThread.join();
-        std::cout << "returning"<<std::endl;
+        std::cout << "joining thread" << std::endl;
+        //if (updateThread.joinable())
+        //  updateThread.join();
+        std::cout << "returning" << std::endl;
         return (ICommand *) (new SendMessageCommand(message, &networkService));
     }
 
@@ -91,7 +85,7 @@ CmdInputHandler::~CmdInputHandler() {
 }
 
 void CmdInputHandler::updateChat(std::atomic_bool &ifShouldEnd) {
-    if (!ifShouldEnd)
+    while (!ifShouldEnd)
         networkService.update();
 
 }

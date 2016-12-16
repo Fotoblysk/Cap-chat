@@ -18,7 +18,6 @@ NetworkService::NetworkService() {
 void NetworkService::update() {
     std::size_t received;
     char data[255];
-    if (tcpSocketReciver.getLocalPort() != 0)
         if (tcpSocketReciver.receive(data, 255, received) == sf::Socket::Done) {
             std::cout << "got data" << std::endl;
             std::cout << data << std::endl;
