@@ -9,8 +9,6 @@
 #include <Commands/SendMessageCommand.h>
 #include <Commands/NotCorrectCommand.h>
 #include "CmdInputHandler.h"
-#include <atomic>
-#include <thread>
 
 ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
     std::string command;

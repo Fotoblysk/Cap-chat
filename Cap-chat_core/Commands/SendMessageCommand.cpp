@@ -4,7 +4,6 @@
 
 #include "SendMessageCommand.h"
 #include <Services/Encryption.h>
-#include <Services/NetworkService.h>
 
 SendMessageCommand::SendMessageCommand(std::string text, NetworkService *networkService) : _text(text), _networkService(
         networkService) {}
