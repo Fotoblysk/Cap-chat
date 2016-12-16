@@ -30,7 +30,7 @@ ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
             std::cout << "Please insert your passoword" << std::endl;
             std::cin >> password;
             // this is not 100% separated input from program logic
-            return (ICommand *) (new NewAccountCommand(name, password));
+            return new NewAccountCommand(name, password);
         }                          // we want to return functoin we want to execute (search for ICommand patern)
         else if (command == "login") {
 
@@ -42,7 +42,7 @@ ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
             std::cin >> password;
 
 
-            return (ICommand *) (new LoginCommand(name, password));
+            return new LoginCommand(name, password);
         } else if (command == "chat") {
             std::string ip;
             std::cout << "Give me ip" << std::endl;
@@ -63,7 +63,7 @@ ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
         std::string message;
         std::getline(std::cin, message);
         std::cout << message << std::endl;
-        return (ICommand *) (new SendMessageCommand(message, &networkService));
+        return new SendMessageCommand(message, &networkService);
     }
 
 
@@ -81,6 +81,5 @@ CmdInputHandler::~CmdInputHandler() {
 void CmdInputHandler::updateChat(std::atomic_bool &ifShouldEnd) {
     while (!ifShouldEnd)
         networkService.update();
-
 }
 
