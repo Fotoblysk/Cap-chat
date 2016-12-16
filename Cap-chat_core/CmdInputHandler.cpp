@@ -58,17 +58,11 @@ ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
             }
             std::cout << std::endl;
             a = false;
-
         }
     } else if (chatState == ChatState::Chat) {
-        std::cout << "chat mode" << std::endl;
         std::string message;
-        std::cin >> message;
+        std::getline(std::cin, message);
         std::cout << message << std::endl;
-        std::cout << "joining thread" << std::endl;
-        //if (updateThread.joinable())
-        //  updateThread.join();
-        std::cout << "returning" << std::endl;
         return (ICommand *) (new SendMessageCommand(message, &networkService));
     }
 

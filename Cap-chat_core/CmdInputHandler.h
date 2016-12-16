@@ -10,9 +10,9 @@
 #include <thread>
 #include "InputHandler.h"
 #include "CmdView.h"
-#include "CapChatData.h"
+#include "Models/CapChatData.h"
 #include "Commands/ICommand.h"
-#include "NetworkService.h"
+#include "Services/NetworkService.h"
 
 class CmdInputHandler : public InputHandler {
 public:

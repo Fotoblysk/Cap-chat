@@ -6,7 +6,7 @@
 #define CAP_CHAT_CAPCHATDATA_H
 
 
-#include "Account.h"
+#include "Models/Account.h"
 
 class CapChatData {
     Account _account;

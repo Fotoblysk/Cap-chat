@@ -6,13 +6,13 @@
 #define CAP_CHAT_SENDMESSAGE_H
 
 #include <string>
-#include <NetworkService.h>
+#include <Services/NetworkService.h>
 #include "ICommand.h"
 
 class SendMessageCommand : public ICommand {
 public:
     SendMessageCommand(std::string text, NetworkService *networkService);
-
+    void updateText(std::string newText);
     void execute() override;
 
 private:

@@ -4,7 +4,7 @@
 
 #include "LoginCommand.h"
 
-#include <Account.h>
+#include <Models/Account.h>
 
 
 LoginCommand::LoginCommand(std::string name, std::string password):_name(name),_password(password) {}
