@@ -60,6 +60,14 @@ ICommand *CmdInputHandler::handleInput() { // TODO use ICommand pattern here
     } else if (chatState == ChatState::Chat) {
         std::string message;
         std::getline(std::cin, message);
+        if (message  == "kill") {
+            updateThread.detach();
+            return nullptr;   // exiting a program returning booleans for state is not so clear but i try to change small
+            // ammount of code in single feature
+        }else if(message == "close"){
+            chatState = ChatState::Interpreter;
+            updateThread.detach();
+        }
         std::cout << message << std::endl;
         return new SendMessageCommand(message, &networkService);
     }
