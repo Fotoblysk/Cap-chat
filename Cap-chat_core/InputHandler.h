@@ -10,7 +10,7 @@
 
 class InputHandler {// interface
 public:
-    virtual ICommand * handleInput() = 0;
+    virtual ICommand *handleInput() = 0;
 };
 
 

@@ -7,8 +7,8 @@
 #include <Models/Account.h>
 
 
-LoginCommand::LoginCommand(std::string name, std::string password):_name(name),_password(password) {}
+LoginCommand::LoginCommand(std::string name, std::string password) : _name(name), _password(password) {}
 
 void LoginCommand::execute() {
-    Account::login(_name,_password);
+    Account::login(_name, _password);
 }

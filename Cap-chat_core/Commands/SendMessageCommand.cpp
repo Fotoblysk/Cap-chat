@@ -16,5 +16,5 @@ void SendMessageCommand::execute() {
 }
 
 void SendMessageCommand::updateText(std::string newText) {
-    _text=newText;
+    _text = newText;
 }

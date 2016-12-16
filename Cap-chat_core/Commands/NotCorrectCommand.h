@@ -8,7 +8,7 @@
 
 #include "ICommand.h"
 
-class NotCorrectCommand: public ICommand {
+class NotCorrectCommand : public ICommand {
 public:
     void execute() override;
 };

@@ -12,7 +12,9 @@
 class SendMessageCommand : public ICommand {
 public:
     SendMessageCommand(std::string text, NetworkService *networkService);
+
     void updateText(std::string newText);
+
     void execute() override;
 
 private:
