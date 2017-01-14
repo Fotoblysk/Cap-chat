@@ -21,7 +21,7 @@ endif ()
 add_subdirectory(Cap-chat_core)
 add_subdirectory(Cap-chat_tests)
 
-target_link_libraries(Cap-chat Cap-chat_core)
+target_link_libraries(Cap-chat Cap-chat_core -lpthread -lm)
 
 # Test code
 include(CTest)
