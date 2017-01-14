@@ -33,7 +33,7 @@ include_directories("${PROJECT_BINARY_DIR}")
 
 # Define sources and executable
 set(EXECUTABLE_NAME "Cap-chat_core")
-add_library(${EXECUTABLE_NAME} CapChat.cpp CapChat.h Account.cpp Account.h CmdView.cpp CmdView.h InputHandler.h CmdInputHandler.cpp CmdInputHandler.h Commands/ICommand.h Commands/NewAccountCommand.cpp Commands/NewAccountCommand.h CapChatData.h Commands/LoginCommand.cpp Commands/LoginCommand.h Encryption.cpp Encryption.h Commands/SendMessageCommand.cpp Commands/SendMessageCommand.h)
+add_library(${EXECUTABLE_NAME} CapChat.cpp CapChat.h Models/Account.cpp Models/Account.h CmdView.cpp CmdView.h InputHandler.h CmdInputHandler.cpp CmdInputHandler.h Commands/ICommand.h Commands/NewAccountCommand.cpp Commands/NewAccountCommand.h Models/CapChatData.h Commands/LoginCommand.cpp Commands/LoginCommand.h Services/Encryption.cpp Services/Encryption.h Commands/SendMessageCommand.cpp Commands/SendMessageCommand.h Services/NetworkService.cpp Services/NetworkService.h Commands/NotCorrectCommand.cpp Commands/NotCorrectCommand.h)
 
 
 # Detect and add SFML

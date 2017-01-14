@@ -6,19 +6,39 @@
 #define CAP_CHAT_CMDINPUTHANDLER_H
 
 
+#include <atomic>
+#include <thread>
 #include "InputHandler.h"
 #include "CmdView.h"
-#include "CapChatData.h"
+#include "Models/CapChatData.h"
 #include "Commands/ICommand.h"
+#include "Services/NetworkService.h"
 
 class CmdInputHandler : public InputHandler {
 public:
-    CmdInputHandler(CmdView* view, CapChatData* data);
-    CapChatData* _data;
+    enum ChatState {
+        Interpreter,
+        Chat
+    };
+    ChatState chatState;
+
+    CmdInputHandler(CmdView *view, CapChatData *data);
+
+    NetworkService networkService;
+
+    void updateChat(std::atomic_bool &ifShouldEnd);
+
+    CapChatData *_data;
+
     virtual ~CmdInputHandler();
-    ICommand * handleInput() override;
+
+    ICommand *handleInput() override;
+
+    std::atomic_bool a;
+    std::thread updateThread;
+
 private:
-    CmdView* _view;
+    CmdView *_view;
 };
 
 

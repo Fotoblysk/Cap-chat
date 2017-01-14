@@ -29,7 +29,6 @@ std::string Account::login(std::string name, std::string password) {
     std::string filename;
 
 
-
     std::fstream accountfile;
 
     filename = name + ".txt";
@@ -41,7 +40,7 @@ std::string Account::login(std::string name, std::string password) {
         if ((readName == name) && (readPassword == password)) {
             std::cout << "logged succesfully!" << std::endl;
             return name;
-        }else {std::cout << "logging data is incorrect " << std::endl;}
+        } else { std::cout << "logging data is incorrect " << std::endl; }
     } else { std::cout << "no such user on this computer " << std::endl; }
     accountfile.close();
     return "";
